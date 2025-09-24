@@ -1,0 +1,631 @@
+/* === CSS CUSTOM PROPERTIES (VARIABLES) === */
+.jenkins-dark-material-enabled {
+  /* Material Dark Color Palette */
+  --jdm-primary-bg: #0f1015;
+  --jdm-secondary-bg: #1a1d26;
+  --jdm-tertiary-bg: #252843;
+  --jdm-surface: #2a2d3d;
+  --jdm-surface-variant: #353854;
+  
+  /* Text Colors */
+  --jdm-text: #e8eaed;
+  --jdm-text-secondary: #bdc1c6;
+  --jdm-text-disabled: #6e7681;
+  
+  /* Accent Colors - Material Purple/Indigo */
+  --jdm-accent: #6366f1;
+  --jdm-accent-2: #5856eb;
+  --jdm-accent-hover: #7c7df8;
+  --jdm-accent-light: rgba(99, 102, 241, 0.1);
+  
+  /* Status Colors */
+  --jdm-success: #22c55e;
+  --jdm-warning: #f59e0b;
+  --jdm-error: #ef4444;
+  --jdm-info: #3b82f6;
+  
+  /* Code/Console Colors */
+  --jdm-code-bg: #1e1e2e;
+  --jdm-code-text: #cdd6f4;
+  --jdm-console-bg: #11111b;
+  
+  /* Border Colors */
+  --jdm-border: rgba(255, 255, 255, 0.05);
+  --jdm-border-strong: rgba(255, 255, 255, 0.12);
+  
+  /* Shadow */
+  --jdm-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --jdm-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* === FOUNDATION - ROOT ELEMENTS === */
+html.jenkins-dark-material-enabled,
+html.jenkins-dark-material-enabled body {
+  background: var(--jdm-primary-bg) !important;
+  color: var(--jdm-text) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.jenkins-dark-material-enabled #page-head,
+.jenkins-dark-material-enabled #page-body,
+.jenkins-dark-material-enabled #main-panel,
+.jenkins-dark-material-enabled #side-panel {
+  background: var(--jdm-primary-bg) !important;
+  color: var(--jdm-text) !important;
+}
+
+.jenkins-dark-material-enabled #main-panel {
+  margin-top: 10px;
+}
+
+.jenkins-dark-material-enabled #side-panel {
+  margin-top: 10px;
+}
+
+/* === HEADER AND NAVIGATION === */
+.jenkins-dark-material-enabled .top-sticker,
+.jenkins-dark-material-enabled .top-sticker-inner,
+.jenkins-dark-material-enabled #header {
+  background: var(--jdm-secondary-bg) !important;
+  border-bottom: 1px solid var(--jdm-border-strong) !important;
+  box-shadow: var(--jdm-shadow) !important;
+}
+
+.jenkins-dark-material-enabled .logo {
+  filter: brightness(0.9) !important;
+}
+
+/* Search box in header */
+.jenkins-dark-material-enabled #search-box {
+  background: var(--jdm-surface) !important;
+  border: 1px solid var(--jdm-border) !important;
+  color: var(--jdm-text) !important;
+  border-radius: 6px !important;
+}
+
+/* === BREADCRUMBS === */
+.jenkins-dark-material-enabled #page-header {
+  background: var(--jdm-tertiary-bg) !important;
+  border-bottom: 1px solid var(--jdm-border) !important;
+  --background-opacity: 0% !important;
+}
+
+.jenkins-dark-material-enabled #breadcrumbs a {
+  color: var(--jdm-accent) !important;
+  text-decoration: none !important;
+}
+
+.jenkins-dark-material-enabled #breadcrumbs a:hover {
+  color: var(--jdm-accent-hover) !important;
+}
+
+/* === LINKS === */
+.jenkins-dark-material-enabled a {
+  color: var(--jdm-accent) !important;
+}
+
+.jenkins-dark-material-enabled a:hover {
+  color: var(--jdm-accent-hover) !important;
+}
+
+.jenkins-dark-material-enabled a:visited {
+  color: #a855f7 !important;
+}
+
+/* === PANELS AND CONTAINERS === */
+.jenkins-dark-material-enabled .pane,
+.jenkins-dark-material-enabled .box,
+.jenkins-dark-material-enabled .panel,
+.jenkins-dark-material-enabled .jenkins-section {
+  background: var(--jdm-secondary-bg) !important;
+  border: 1px solid var(--jdm-border) !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.jenkins-dark-material-enabled .pane-header,
+.jenkins-dark-material-enabled .section-header {
+  background: var(--jdm-surface) !important;
+  color: var(--jdm-text) !important;
+  border-bottom: 1px solid var(--jdm-border-strong) !important;
+  padding: 12px 16px !important;
+  font-weight: 500 !important;
+}
+
+/* === TABLES === */
+.jenkins-dark-material-enabled table {
+  background: var(--jdm-secondary-bg) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: var(--jdm-shadow) !important;
+}
+
+.jenkins-dark-material-enabled th {
+  background: var(--jdm-surface) !important;
+  color: var(--jdm-text) !important;
+  border-bottom: 2px solid var(--jdm-border-strong) !important;
+  font-weight: 600 !important;
+  padding: 12px 16px !important;
+}
+
+.jenkins-dark-material-enabled td {
+  background: var(--jdm-secondary-bg) !important;
+  color: var(--jdm-text) !important;
+  border-bottom: 1px solid var(--jdm-border) !important;
+  padding: 12px 16px !important;
+}
+
+.jenkins-dark-material-enabled tr:hover td {
+  background: var(--jdm-surface) !important;
+}
+
+.jenkins-dark-material-enabled tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* === BUTTONS === */
+.jenkins-dark-material-enabled button,
+.jenkins-dark-material-enabled .jenkins-button,
+.jenkins-dark-material-enabled .task a,
+.jenkins-dark-material-enabled .yui-button,
+.jenkins-dark-material-enabled input[type="submit"],
+.jenkins-dark-material-enabled input[type="button"] {
+  background: var(--jdm-surface) !important;
+  border: 1px solid var(--jdm-border-strong) !important;
+  color: var(--jdm-text) !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.jenkins-dark-material-enabled button:hover,
+.jenkins-dark-material-enabled .jenkins-button:hover,
+.jenkins-dark-material-enabled .task a:hover,
+.jenkins-dark-material-enabled .yui-button:hover {
+  background: var(--jdm-surface-variant) !important;
+  border-color: var(--jdm-accent-light) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: var(--jdm-shadow) !important;
+}
+
+/* Primary/Accent Buttons */
+.jenkins-dark-material-enabled .btn-primary,
+.jenkins-dark-material-enabled .primary,
+.jenkins-dark-material-enabled .task a.primary {
+  background: linear-gradient(135deg, var(--jdm-accent), var(--jdm-accent-2)) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.jenkins-dark-material-enabled .btn-primary:hover,
+.jenkins-dark-material-enabled .primary:hover {
+  background: linear-gradient(135deg, var(--jdm-accent-hover), var(--jdm-accent)) !important;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* === FORM ELEMENTS === */
+.jenkins-dark-material-enabled input,
+.jenkins-dark-material-enabled select,
+.jenkins-dark-material-enabled textarea {
+  background: var(--jdm-surface) !important;
+  color: var(--jdm-text) !important;
+  border: 1px solid var(--jdm-border) !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.jenkins-dark-material-enabled input:focus,
+.jenkins-dark-material-enabled select:focus,
+.jenkins-dark-material-enabled textarea:focus {
+  outline: 2px solid var(--jdm-accent) !important;
+  outline-offset: 2px !important;
+  border-color: var(--jdm-accent) !important;
+  background: var(--jdm-surface-variant) !important;
+}
+
+.jenkins-dark-material-enabled input::placeholder,
+.jenkins-dark-material-enabled textarea::placeholder {
+  color: var(--jdm-text-disabled) !important;
+}
+
+/* Checkboxes and Radio Buttons */
+.jenkins-dark-material-enabled input[type="checkbox"],
+.jenkins-dark-material-enabled input[type="radio"] {
+  accent-color: var(--jdm-accent) !important;
+}
+
+/* === CODE AND CONSOLE === */
+
+.jenkins-dark-material-enabled code {
+  background: var(--jdm-code-bg) !important;
+  color: var(--jdm-code-text) !important;
+  border: 1px solid var(--jdm-border) !important;
+  border-left: 4px solid var(--jdm-accent) !important;
+  border-radius: 6px !important;
+  padding: 6px 8px !important;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace !important;
+  font-size: 1em !important;
+  line-height: 1 !important;
+}
+
+.jenkins-dark-material-enabled .console-output {
+  background: var(--jdm-code-bg) !important;
+  color: var(--jdm-code-text) !important;
+  border: 1px solid var(--jdm-border) !important;
+  border-left: 4px solid var(--jdm-accent) !important;
+  border-radius: 6px !important;
+  padding: 12px !important;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace !important;
+  font-size: 1em !important;
+  line-height: 1.5 !important;
+}
+
+.jenkins-dark-material-enabled .console-output {
+  background: var(--jdm-console-bg) !important;
+  overflow-y: auto !important;
+}
+
+/* === NOTIFICATIONS AND ALERTS === */
+.jenkins-dark-material-enabled .alert,
+.jenkins-dark-material-enabled .notification,
+.jenkins-dark-material-enabled .message,
+.jenkins-dark-material-enabled .error,
+.jenkins-dark-material-enabled .warning {
+  background: var(--jdm-surface) !important;
+  border: 1px solid var(--jdm-border-strong) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  margin: 8px 0 !important;
+  box-shadow: var(--jdm-shadow) !important;
+}
+
+.jenkins-dark-material-enabled .alert.alert-success {
+  border-left: 4px solid var(--jdm-success) !important;
+  background: rgba(34, 197, 94, 0.05) !important;
+}
+
+.jenkins-dark-material-enabled .alert.alert-warning {
+  border-left: 4px solid var(--jdm-warning) !important;
+  background: rgba(245, 158, 11, 0.05) !important;
+}
+
+.jenkins-dark-material-enabled .alert.alert-danger,
+.jenkins-dark-material-enabled .error {
+  border-left: 4px solid var(--jdm-error) !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* === BUILD STATUS INDICATORS === */
+.jenkins-dark-material-enabled .icon-blue,
+.jenkins-dark-material-enabled .icon-blue-anime {
+  filter: hue-rotate(200deg) brightness(1.2) !important;
+}
+
+.jenkins-dark-material-enabled .icon-red,
+.jenkins-dark-material-enabled .icon-red-anime {
+  filter: hue-rotate(0deg) brightness(1.1) !important;
+}
+
+.jenkins-dark-material-enabled .icon-yellow,
+.jenkins-dark-material-enabled .icon-yellow-anime {
+  filter: hue-rotate(45deg) brightness(1.3) !important;
+}
+
+.jenkins-dark-material-enabled .icon-grey,
+.jenkins-dark-material-enabled .icon-disabled {
+  filter: grayscale(1) brightness(0.7) !important;
+}
+
+/* === MODALS AND DIALOGS === */
+.jenkins-dark-material-enabled .modal,
+.jenkins-dark-material-enabled .dialog,
+.jenkins-dark-material-enabled .popup {
+  background: var(--jdm-secondary-bg) !important;
+  border: 1px solid var(--jdm-border-strong) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--jdm-shadow-strong) !important;
+}
+
+.jenkins-dark-material-enabled .modal-header {
+  background: var(--jdm-surface) !important;
+  border-bottom: 1px solid var(--jdm-border-strong) !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+/* === DROPDOWN MENUS === */
+.jenkins-dark-material-enabled .yuimenu,
+.jenkins-dark-material-enabled .dropdown-menu {
+  background: var(--jdm-surface) !important;
+  border: 1px solid var(--jdm-border-strong) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--jdm-shadow-strong) !important;
+  overflow: hidden !important;
+}
+
+.jenkins-dark-material-enabled .yuimenuitemlabel,
+.jenkins-dark-material-enabled .yuimenuitem,
+.jenkins-dark-material-enabled .dropdown-item {
+  background: transparent !important;
+  color: var(--jdm-text) !important;
+  padding: 8px 16px !important;
+  transition: background 0.2s ease !important;
+}
+
+.jenkins-dark-material-enabled .yuimenuitemlabel:hover,
+.jenkins-dark-material-enabled .dropdown-item:hover {
+  background: var(--jdm-accent-light) !important;
+  color: var(--jdm-accent-hover) !important;
+}
+
+/* === BUILD HISTORY === */
+.jenkins-dark-material-enabled #buildHistory {
+  background: var(--jdm-secondary-bg) !important;
+  border-radius: 8px !important;
+}
+
+.jenkins-dark-material-enabled #buildHistory .build-row {
+  border-bottom: 1px solid var(--jdm-border) !important;
+  padding: 8px 12px !important;
+  transition: background 0.2s ease !important;
+}
+
+.jenkins-dark-material-enabled #buildHistory .build-row:hover {
+  background: var(--jdm-surface) !important;
+}
+
+.jenkins-dark-material-enabled #buildHistory .build-row:last-child {
+  border-bottom: none !important;
+}
+
+/* === TABS === */
+.jenkins-dark-material-enabled .tab,
+.jenkins-dark-material-enabled .tabBar .tab {
+  background: var(--jdm-surface) !important;
+  border: 1px solid var(--jdm-border) !important;
+  border-bottom: none !important;
+  color: var(--jdm-text-secondary) !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin-right: 2px !important;
+}
+
+.jenkins-dark-material-enabled .tab.active,
+.jenkins-dark-material-enabled .tabBar .tab.active {
+  background: var(--jdm-secondary-bg) !important;
+  color: var(--jdm-text) !important;
+  border-bottom: 2px solid var(--jdm-accent) !important;
+}
+
+/* === SCROLLBARS === */
+.jenkins-dark-material-enabled ::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.jenkins-dark-material-enabled ::-webkit-scrollbar-track {
+  background: var(--jdm-primary-bg) !important;
+  border-radius: 6px !important;
+}
+
+.jenkins-dark-material-enabled ::-webkit-scrollbar-thumb {
+  background: var(--jdm-border-strong) !important;
+  border-radius: 6px !important;
+  transition: background 0.2s ease !important;
+}
+
+.jenkins-dark-material-enabled ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.jenkins-dark-material-enabled ::-webkit-scrollbar-corner {
+  background: var(--jdm-primary-bg) !important;
+}
+
+/* === PROGRESS BARS === */
+.jenkins-dark-material-enabled .progress,
+.jenkins-dark-material-enabled .progress-bar {
+  background: var(--jdm-surface) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.jenkins-dark-material-enabled .progress-bar-striped {
+  background: linear-gradient(45deg, var(--jdm-accent) 25%, transparent 25%, transparent 50%, var(--jdm-accent) 50%, var(--jdm-accent) 75%, transparent 75%, transparent) !important;
+  background-size: 20px 20px !important;
+}
+
+/* === PREVENT IMAGE INVERSION === */
+.jenkins-dark-material-enabled img.jenkins-dark-no-invert,
+.jenkins-dark-material-enabled svg.jenkins-dark-no-invert {
+  filter: none !important;
+}
+
+/* === SEPARATORS === */
+.jenkins-dark-material-enabled hr,
+.jenkins-dark-material-enabled .separator {
+  border: none !important;
+  height: 1px !important;
+  background: var(--jdm-border) !important;
+  margin: 16px 0 !important;
+}
+
+/* === TOOLTIPS === */
+.jenkins-dark-material-enabled .tooltip,
+.jenkins-dark-material-enabled .tippy-box {
+  background: var(--jdm-surface-variant) !important;
+  color: var(--jdm-text) !important;
+  border: 1px solid var(--jdm-border-strong) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--jdm-shadow) !important;
+}
+
+/* === LOADING STATES === */
+.jenkins-dark-material-enabled .loading,
+.jenkins-dark-material-enabled .spinner {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* === RESPONSIVE IMPROVEMENTS === */
+@media (max-width: 768px) {
+  .jenkins-dark-material-enabled .pane,
+  .jenkins-dark-material-enabled .box {
+    margin: 8px !important;
+    border-radius: 6px !important;
+  }
+  
+  .jenkins-dark-material-enabled table {
+    font-size: 14px !important;
+  }
+  
+  .jenkins-dark-material-enabled th,
+  .jenkins-dark-material-enabled td {
+    padding: 8px !important;
+  }
+}
+
+/* === DROPDOWN CHEVRON BUTTONS === */
+.jenkins-dark-material-enabled .jenkins-menu-dropdown-chevron {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  height: 14px !important;
+  outline: none !important;
+  padding: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 4px !important;
+  width: 14px !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  z-index: 10 !important;
+}
+
+.jenkins-dark-material-enabled .jenkins-table__link .jenkins-menu-dropdown-chevron {
+  top: 0 !important;
+}
+
+.jenkins-dark-material-enabled .jenkins-menu-dropdown-chevron:before {
+  content: "" !important;
+  inset: -10px !important;
+  position: absolute !important;
+}
+
+.jenkins-dark-material-enabled .jenkins-menu-dropdown-chevron:after {
+  background: var(--jdm-text) !important;
+  bottom: 0 !important;
+  content: "" !important;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3EChevron Down%3C/title%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144'/%3E%3C/svg%3E") !important;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Ctitle%3EChevron Down%3C/title%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144'/%3E%3C/svg%3E") !important;
+  mask-position: center !important;
+  -webkit-mask-position: center !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-repeat: no-repeat !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+/* Show chevron on link hover */
+.jenkins-dark-material-enabled a:hover .jenkins-menu-dropdown-chevron,
+.jenkins-dark-material-enabled .jenkins-table__link:hover .jenkins-menu-dropdown-chevron,
+.jenkins-dark-material-enabled tr:hover .jenkins-menu-dropdown-chevron {
+  opacity: 1 !important;
+  transform: translateX(-2px) !important;
+}
+
+/* Enhanced hover state for chevron itself */
+.jenkins-dark-material-enabled .jenkins-menu-dropdown-chevron:hover:after {
+  background: var(--jdm-accent) !important;
+  opacity: 1 !important;
+}
+
+/* Ensure link text remains visible */
+.jenkins-dark-material-enabled a:hover {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* === SPAN  AND P ELEMENTS WITHOUT CLASSES === */
+.jenkins-dark-material-enabled span {
+  color: var(--jdm-text) !important;
+}
+
+.jenkins-dark-material-enabled p {
+  color: var(--jdm-text) !important;
+}
+
+/* === ANIMATION UTILITIES === */
+.jenkins-dark-material-enabled * {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform !important;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease !important;
+}
+
+/* === HIGH CONTRAST MODE SUPPORT === */
+@media (prefers-contrast: high) {
+  .jenkins-dark-material-enabled {
+    --jdm-border: rgba(255, 255, 255, 0.2) !important;
+    --jdm-border-strong: rgba(255, 255, 255, 0.3) !important;
+    --jdm-text: #ffffff !important;
+  }
+}
+
+/* === QUICK FIXES === */
+.jenkins-dark-material-enabled .jenkins-bottom-app-bar__shadow {
+  opacity: 0 !important;
+}
+
+.jenkins-dark-material-enabled .jenkins-readonly {
+  color: var(--jdm-text-secondary) !important;
+}
+
+.jenkins-dark-material-enabled .editor,
+.jenkins-dark-material-enabled .stage-start-time,
+.jenkins-dark-material-enabled .CodeMirror-scroll {
+  background-color: var(--jdm-console-bg) !important;
+}
+
+.jenkins-dark-material-enabled .ace_layer,
+.jenkins-dark-material-enabled .cell-color {
+  color: var(--jdm-text) !important;
+}
+
+.jenkins-dark-material-enabled #side-panel .pane-frame,
+.jenkins-dark-material-enabled .jenkins-card {
+  background-color: var(--jdm-secondary-bg) !important;
+}
+
+.jenkins-dark-material-enabled .jobName .badge a {
+  color: var(--jdm-code-text) !important;
+}
+
+.jenkins-dark-material-enabled .message {
+  padding: 2px !important;
+  margin: 2px !important;
+  font-size: 0.69em !important;
+}
+
+.jenkins-dark-material-enabled .jenkins-card__reveal {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  outline: none !important;
+  padding: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 18px !important;
+  opacity: 0.9 !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  z-index: 10 !important;
+}

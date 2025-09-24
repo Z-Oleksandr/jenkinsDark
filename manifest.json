@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Jenkins Dark Material",
+  "version": "1.0",
+  "description": "Dark Material theme for a Jenkins host.",
+  "permissions": [ "storage" ],
+  "host_permissions": [ "http://dedd-app04:8080/*" ],
+  "content_scripts": [
+    {
+      "matches": [ "http://dedd-app04:8080/*" ],
+      "exclude_matches": ["http://dedd-app04:8080/blue/*"],
+      "js": [ "content.js" ],
+      "css": [ "dark.css" ]
+    }
+  ]
+}
