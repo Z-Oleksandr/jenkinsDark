@@ -15,7 +15,7 @@
     wrap.style.bottom = '20px';
     wrap.style.left = '20px';
     wrap.style.zIndex = '9999';
-    wrap.style.padding = '6.9px';
+    wrap.style.padding = '1.5px';
     wrap.style.borderRadius = '8px';
     wrap.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
     wrap.style.boxShadow = '0 6px 18px rgba(0,0,0,0.5)';
@@ -28,7 +28,7 @@
     btn.style.border = 'none';
     btn.style.background = 'transparent';
     btn.style.color = 'inherit';
-    btn.style.padding = '4px 10px';
+    btn.style.padding = '9.5px 18px';
     btn.style.borderRadius = '4px';
     btn.style.fontSize = '10px';
     btn.style.outline = 'none';
