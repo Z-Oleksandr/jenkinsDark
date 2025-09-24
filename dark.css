@@ -596,12 +596,15 @@ html.jenkins-dark-material-enabled body {
 }
 
 .jenkins-dark-material-enabled .ace_layer,
-.jenkins-dark-material-enabled .cell-color {
+.jenkins-dark-material-enabled .cell-color,
+.jenkins-dark-material-enabled #command-bar,
+.jenkins-dark-material-enabled .jenkins-dropdown__item {
   color: var(--jdm-text) !important;
 }
 
 .jenkins-dark-material-enabled #side-panel .pane-frame,
-.jenkins-dark-material-enabled .jenkins-card {
+.jenkins-dark-material-enabled .jenkins-card,
+.jenkins-dark-material-enabled #search-results {
   background-color: var(--jdm-secondary-bg) !important;
 }
 
